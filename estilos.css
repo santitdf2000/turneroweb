@@ -1,0 +1,193 @@
+
+:root {
+  --color-principal: darkblue;
+  --color-principal-hover: #00008b;
+  --color-fondo: #f5f7fa;
+  --color-fondo-libre: #eef6ff;
+  --color-fondo-ocupado: #ffe0e0;
+  --color-borde: #cddcf0;
+  --color-texto: #333;
+  --color-blanco: white;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+
+
+
+header {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 25px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+}
+
+header p {
+  margin: 0;
+}
+
+
+
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: var(--color-blanco);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--color-principal);
+}
+
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dia-header {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.celda {
+  background-color: var(--color-fondo-libre);
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  min-height: 70px;
+}
+
+.celda span {
+  color: green;
+  font-weight: bold;
+}
+
+.celda.ocupada {
+  background-color: var(--color-fondo-ocupado);
+  border-color: #f5b8b8;
+}
+
+.celda.ocupada span {
+  color: #a13d3d;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-principal-hover);
+}
+
+
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+
+
+@media (max-width: 800px) {
+
+  .calendario {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .calendario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .calendario {
+    grid-template-columns: 1fr;
+  }
+
+  .dia-header {
+    font-size: 14px;
+  }
+
+}

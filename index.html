@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turnero de Conferencias</title>
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Turnero de Conferencias</h1>
+    <p>Reservá tu horario de manera rápida y sencilla.</p>
+  </header>
+
+  <main>
+
+    <!-- Calendario -->
+    <section>
+      <h2>Calendario de turnos</h2>
+
+      <div class="calendario">
+
+        <div class="dia-header">Lunes</div>
+        <div class="dia-header">Martes</div>
+        <div class="dia-header">Miércoles</div>
+        <div class="dia-header">Jueves</div>
+        <div class="dia-header">Viernes</div>
+        <div class="dia-header">Sábado</div>
+        <div class="dia-header">Domingo</div>
+
+        <div class="celda">
+          9:00 hs<br>
+          <span>Libre</span>
+        </div>
+
+        <div class="celda ocupada">
+          10:00 hs<br>
+          <span>Ocupado</span>
+        </div>
+
+        <div class="celda">
+          11:00 hs<br>
+          <span>Libre</span>
+        </div>
+
+        <div class="celda ocupada">
+          12:00 hs<br>
+          <span>Ocupado</span>
+        </div>
+
+        <div class="celda">
+          14:00 hs<br>
+          <span>Libre</span>
+        </div>
+
+        <div class="celda">
+          15:00 hs<br>
+          <span>Libre</span>
+        </div>
+
+        <div class="celda ocupada">
+          16:00 hs<br>
+          <span>Ocupado</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <section>
+      <h2>Reservar un turno</h2>
+
+      <form>
+
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresá tu nombre"
+        >
+
+        <label for="fecha">Fecha:</label>
+        <input
+          type="date"
+          id="fecha"
+          name="fecha"
+        >
+
+        <label for="hora">Hora:</label>
+        <input
+          type="time"
+          id="hora"
+          name="hora"
+        >
+
+        <label for="tema">Tema de la reunión:</label>
+        <textarea
+          id="tema"
+          name="tema"
+          placeholder="Escribí el tema de la reunión"
+        ></textarea>
+
+        <button type="submit">Reservar turno</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Turnero de Conferencias - Proyecto Integrador</p>
+  </footer>
+
+</body>
+</html>
